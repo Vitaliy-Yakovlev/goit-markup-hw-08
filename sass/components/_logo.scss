@@ -1,0 +1,41 @@
+.logo {
+  color: $accent-color;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.nav-link-logo {
+  color: $primary-text-color;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  transition: color $transformation-time;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.nav-link-logo.footer {
+  margin: 0px;
+  padding: 0;
+
+  margin-bottom: 20px;
+  display: inline-block;
+
+  color: $primary-white-color;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

@@ -1,0 +1,43 @@
+.container {
+  @include container();
+}
+
+.clients {
+  @include padding-top-bottom();
+
+  &-list {
+    @extend %ul;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &-section-title {
+    margin: 0;
+    margin-bottom: 50px;
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+  }
+}
+
+.clients-link-svg {
+  @include box-flex();
+
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+
+  transition: fill $transformation-time;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    fill: $accent-color;
+  }
+}

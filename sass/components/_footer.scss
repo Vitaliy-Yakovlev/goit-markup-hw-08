@@ -1,0 +1,179 @@
+.footer {
+  padding: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $secondary-color;
+
+  &-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-top {
+    @extend %container;
+
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.address {
+  padding: 0;
+  font-style: normal;
+
+  &-link {
+    margin: 0;
+  }
+
+  &-text {
+    margin: 0;
+    margin-bottom: 9px;
+
+    color: $primary-white-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.address-footer-link {
+  margin-bottom: 9px;
+
+  color: $footer-link-color;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  transition: color $transformation-time;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+// Социальные сети
+
+.network-footer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+
+  &-text {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    color: $primary-white-color;
+  }
+
+  &-container {
+    display: flex;
+  }
+}
+
+.network-footer-link {
+  @include box-flex();
+
+  margin-left: 10px;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $primary-white-color;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color $transformation-time;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $primary-white-color;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+// Подписаться
+
+.join-footer {
+  margin-left: auto;
+}
+
+.form-footer {
+  display: flex;
+
+  &-field {
+    display: flex;
+  }
+
+  &-input {
+    margin: 0;
+    padding: 15px 16px;
+    display: inline-block;
+    min-width: 358px;
+
+    color: $primary-white-color;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+  }
+}
+
+.form-footer-btn {
+  @include box-flex();
+
+  border: 1px solid transparent;
+  text-align: center;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 29px 10px 28px;
+  margin-left: 10px;
+
+  color: $primary-white-color;
+  background-color: $accent-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  transition: color $transformation-time, background-color $transformation-time;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $primary-white-color;
+    border: 1px solid transparent;
+    fill: $accent-color;
+  }
+}
+
+.form-footer-svg {
+  margin-left: 10px;
+
+  fill: white;
+
+  transition: fill $transformation-time;
+
+  .form-footer-btn:hover &,
+  .form-footer-btn:focus & {
+    fill: $accent-color;
+  }
+}

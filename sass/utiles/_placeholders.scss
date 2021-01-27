@@ -1,0 +1,32 @@
+// Вазывается  @extend %Имя
+
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px;
+}
+
+%vizually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+%ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%link {
+  color: $primary-text-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color $transformation-time;
+}

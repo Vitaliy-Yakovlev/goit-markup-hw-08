@@ -1,0 +1,60 @@
+.container {
+  @include container();
+}
+
+.vizually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.advant-section {
+  @include padding-top-bottom();
+}
+
+.advant-item {
+  @extend %ul;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * 30px);
+  margin-top: calc(-1 * 30px);
+}
+
+.advant-title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  color: $primary-text-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advant-text {
+  margin: 0;
+  color: $title-text-color;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.advant-icon {
+  @include box-flex();
+
+  text-align: center;
+  background: #f5f4fa;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: $card-table;
+}
+
+.advant-item .advant-item {
+  margin-left: $card-table;
+  margin-top: $card-table;
+  flex-basis: calc(100% / 4 - 30px);
+}

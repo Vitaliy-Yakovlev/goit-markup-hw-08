@@ -1,0 +1,25 @@
+body {
+  background-color: $primary-white-color;
+  color: $title-text-color;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  outline-offset: 0;
+}

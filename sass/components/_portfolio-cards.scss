@@ -1,0 +1,91 @@
+.section-workcin {
+  @include padding-top-bottom();
+
+  background-color: $primary-white-color;
+}
+
+// Наши работы
+
+.pic-box {
+  @extend %ul;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.cards {
+  display: block;
+  padding: 20px 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+
+  &-box {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+  }
+
+  &-section-title {
+    margin: 0;
+    margin-bottom: 4px;
+
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &-section-text {
+    margin: 0;
+
+    color: $title-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+  }
+}
+
+.cards-box-link:focus,
+.cards-box-link:hover {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  &:hover .overlay-text,
+  &:focus .overlay-text {
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  position: relative;
+  overflow: hidden;
+
+  &-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: $primary-white-color;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+
+    transform: translateY(101%);
+
+    transition: transform $transformation-time;
+  }
+}
