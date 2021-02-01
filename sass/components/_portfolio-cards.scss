@@ -1,5 +1,13 @@
 .section-workcin {
-  @include padding-top-bottom();
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   background-color: $primary-white-color;
 }
@@ -9,11 +17,29 @@
 .pic-box {
   @extend %ul;
 
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 
-  margin-left: -30px;
-  margin-top: -30px;
+.card-set {
+  @media screen and (min-width: 480px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 15px;
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .cards {
@@ -23,12 +49,6 @@
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-
-  &-box {
-    margin-left: 30px;
-    margin-top: 30px;
-    flex-basis: calc(100% / 3 - 30px);
-  }
 
   &-section-title {
     margin: 0;

@@ -1,33 +1,53 @@
-.container {
-  @include container();
-}
-
 .clients {
-  @include padding-top-bottom();
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   &-list {
     @extend %ul;
 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @media screen and (min-width: 480px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
   }
 
   &-section-title {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: $primary-text-color;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
   }
+
+  &-title {
+    @media screen and (min-width: 480px) {
+      flex-basis: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 6 * 30px) / 6);
+    }
+  }
 }
 
 .clients-link-svg {
   @include box-flex();
 
-  width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;

@@ -1,7 +1,15 @@
 .footer {
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   padding: 0;
-  padding-top: 60px;
-  padding-bottom: 60px;
 
   background-color: $secondary-color;
 
@@ -9,23 +17,39 @@
     display: flex;
     flex-direction: column;
   }
+}
 
-  &-top {
-    @extend %container;
-
+.desktop {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
   }
 }
 
-.container-footer {
-  display: flex;
-  flex-direction: column;
+.tablet {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1200) {
+  }
 }
 
 .address {
   padding: 0;
   font-style: normal;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 61px;
+    margin-bottom: 60px;
+  }
 
   &-link {
     margin: 0;
@@ -33,18 +57,23 @@
 
   &-text {
     margin: 0;
-    margin-bottom: 9px;
 
     color: $primary-white-color;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+
+    @media screen and (min-width: 480px) {
+      margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 }
 
 .address-footer-link {
-  margin-bottom: 9px;
-
   color: $footer-link-color;
   font-weight: 400;
   font-size: 14px;
@@ -56,14 +85,30 @@
   &:focus {
     color: $accent-color;
   }
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 // Социальные сети
 
 .network-footer {
-  display: flex;
-  flex-direction: column;
-  margin-left: 70px;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 
   &-text {
     display: block;
@@ -79,6 +124,13 @@
 
   &-container {
     display: flex;
+  }
+}
+
+.network-footer-container {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    justify-content: center;
+    margin-bottom: 60px;
   }
 }
 
@@ -109,21 +161,28 @@
 // Подписаться
 
 .join-footer {
-  margin-left: auto;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .form-footer {
-  display: flex;
-
-  &-field {
+  @media screen and (min-width: 1200px) {
     display: flex;
   }
-
   &-input {
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      margin-bottom: 20px;
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
+
     margin: 0;
     padding: 15px 16px;
     display: inline-block;
-    min-width: 358px;
 
     color: $primary-white-color;
 
@@ -138,12 +197,20 @@
 .form-footer-btn {
   @include box-flex();
 
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+
   border: 1px solid transparent;
   text-align: center;
   min-width: 200px;
   border-radius: 4px;
   padding: 10px 29px 10px 28px;
-  margin-left: 10px;
 
   color: $primary-white-color;
   background-color: $accent-color;

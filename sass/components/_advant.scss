@@ -1,5 +1,10 @@
-.container {
-  @include container();
+.advant-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .vizually-hidden {
@@ -10,17 +15,32 @@
   margin: -1px;
 }
 
-.advant-section {
-  @include padding-top-bottom();
-}
-
 .advant-item {
   @extend %ul;
 
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * 30px);
-  margin-top: calc(-1 * 30px);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.advant-list {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  &:not(:last-child) {
+    @media screen and(max-width:767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+  }
 }
 
 .advant-title {
@@ -32,6 +52,10 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .advant-text {
@@ -43,18 +67,10 @@
 }
 
 .advant-icon {
-  @include box-flex();
+  @include box-flex;
 
-  text-align: center;
+  margin-bottom: 30px;
   background: #f5f4fa;
   border-radius: 4px;
-  width: 270px;
-  height: 120px;
-  margin-bottom: $card-table;
-}
-
-.advant-item .advant-item {
-  margin-left: $card-table;
-  margin-top: $card-table;
-  flex-basis: calc(100% / 4 - 30px);
+  min-height: 120px;
 }

@@ -31,14 +31,44 @@
 .radio-button-list {
   @extend %ul;
 
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-  margin-left: 0;
-  margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 50px;
 
-  & .radio-button-title + .radio-button-title {
-    display: block;
-    margin-left: 8px;
+    & .radio-button-title + .radio-button-title {
+      display: block;
+      margin-left: 8px;
+    }
+  }
+}
+
+.radio-button-title {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 40px;
+    }
+
+    &:nth-child(-n + 6) {
+      margin-left: 8px;
+    }
+
+    &:nth-child(-n + 1) {
+      margin-left: 0px;
+    }
+
+    &:nth-last-child(2) {
+      margin-left: 0px;
+    }
   }
 }

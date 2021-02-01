@@ -1,12 +1,5 @@
 .auth-nav {
   @extend %ul;
-
-  display: flex;
-  margin-left: auto;
-}
-
-.auth-nav-item + .auth-nav-item {
-  margin-left: 50px;
 }
 
 .auth-nav-link {

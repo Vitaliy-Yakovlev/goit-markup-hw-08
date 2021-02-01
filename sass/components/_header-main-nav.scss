@@ -1,19 +1,6 @@
-.header-nav {
-  @extend %container;
-
-  display: flex;
-  align-items: center;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
 .site-nav {
   @extend %ul;
-  display: flex;
-  margin-left: 93px;
+  display: inline-block;
 }
 
 .site-nav .current::after {
@@ -37,11 +24,8 @@
 
 .site-nav-link {
   @extend %link;
-  position: relative;
 
-  display: block;
-  padding-top: 31px;
-  padding-bottom: 31px;
+  position: relative;
 
   &:hover,
   &:focus {
@@ -72,8 +56,4 @@
   color: $accent-color;
 
   transform: scaleX(1);
-}
-
-.site-nav-item + .site-nav-item {
-  margin-left: 50px;
 }
