@@ -6,7 +6,9 @@ body {
 }
 
 body.modal-open {
-  overflow: hidden;
+  @media screen and (max-width: 1199px) {
+    overflow: hidden;
+  }
 }
 
 img {
