@@ -1553,6 +1553,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
+    max-width: 450px;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
   }
