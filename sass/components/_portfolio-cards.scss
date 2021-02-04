@@ -1,10 +1,8 @@
 .section-workcin {
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -17,7 +15,7 @@
 .pic-box {
   @extend %ul;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
@@ -25,18 +23,20 @@
 }
 
 .card-set {
-  @media screen and (min-width: 480px) {
+  text-align: -webkit-center;
+
+  @media screen and (max-width: 767.98px) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     margin: 15px;
     flex-basis: calc((100% - 2 * 30px) / 2);
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin: 15px;
     flex-basis: calc((100% - 3 * 30px) / 3);
   }
@@ -45,6 +45,10 @@
 .cards {
   display: block;
   padding: 20px 24px;
+
+  text-align: start;
+
+  max-width: 450px;
 
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -69,6 +73,10 @@
     font-size: 16px;
     line-height: 1.87;
   }
+}
+
+.cards.property {
+  padding: 20px 24px 56px;
 }
 
 .cards-box-link:focus,

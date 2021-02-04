@@ -1,10 +1,5 @@
 .footer {
-  @media screen and (min-width: 480px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -20,7 +15,12 @@
 }
 
 .desktop {
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -28,12 +28,9 @@
 }
 
 .tablet {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     align-items: baseline;
-  }
-
-  @media screen and (min-width: 1200) {
   }
 }
 
@@ -41,12 +38,12 @@
   padding: 0;
   font-style: normal;
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
     margin-bottom: 60px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-left: 61px;
     margin-bottom: 60px;
   }
@@ -63,11 +60,9 @@
     font-size: 14px;
     line-height: 1.71;
 
-    @media screen and (min-width: 480px) {
-      margin-bottom: 8px;
-    }
+    margin-bottom: 8px;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-bottom: 9px;
     }
   }
@@ -86,11 +81,9 @@
     color: $accent-color;
   }
 
-  @media screen and (min-width: 480px) {
-    margin-bottom: 8px;
-  }
+  margin-bottom: 8px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin-bottom: 9px;
   }
 }
@@ -98,15 +91,15 @@
 // Социальные сети
 
 .network-footer {
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-left: 165px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin-left: 70px;
   }
 
@@ -128,7 +121,7 @@
 }
 
 .network-footer-container {
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     justify-content: center;
     margin-bottom: 60px;
   }
@@ -161,22 +154,24 @@
 // Подписаться
 
 .join-footer {
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
   }
 }
 
 .form-footer {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
   }
   &-input {
-    @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 100%;
+
+    @media screen and (max-width: 1199px) {
       margin-bottom: 20px;
-      width: 450px;
+      max-width: 450px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       width: 358px;
     }
 
@@ -197,12 +192,12 @@
 .form-footer-btn {
   @include box-flex();
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     margin-left: auto;
     margin-right: auto;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin-left: 12px;
   }
 

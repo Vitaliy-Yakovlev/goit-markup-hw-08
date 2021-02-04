@@ -22,47 +22,105 @@
   <body>
     <!--Шапка-->
 
-    <header>
+    <header class="page-header">
       <div class="header-nav container">
         <nav class="main-nav">
           <a href="./index.html" class="nav-link-logo"
             ><span class="logo">Web</span>Studio</a
           >
+          <!-- Мобильная шапка меню -->
 
-          <ul class="site-nav">
-            <li class="site-nav-item">
-              <a href="./index.html" class="site-nav-link current">Студия</a>
-            </li>
+          <div class="mobile-menu">
+            <div class="mobile-menu-btn">
+              <button
+                type="button"
+                class="menu-button"
+                aria-expanded="false"
+                aria-controls="menu-container"
+                data-menu-button
+              >
+                <svg
+                  class="button-icon"
+                  width="40"
+                  height="40"
+                  aria-label="Переключатель мобильного меню"
+                >
+                  <use
+                    class="icon-close"
+                    href="./images/sprite.svg#close"
+                  ></use>
+                  <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
 
-            <li class="site-nav-item">
-              <a href="./portfolio.html" class="site-nav-link">Портфолио</a>
-            </li>
+          <div class="container-mobile-menu" id="menu-container" data-menu>
+            <ul class="site-nav">
+              <li class="site-nav-item">
+                <a href="./index.html" class="site-nav-link current">Студия</a>
+              </li>
 
-            <li class="site-nav-item">
-              <a href="/" class="site-nav-link">Контакты</a>
-            </li>
-          </ul>
+              <li class="site-nav-item">
+                <a href="./portfolio.html" class="site-nav-link">Портфолио</a>
+              </li>
+
+              <li class="site-nav-item">
+                <a href="/" class="site-nav-link">Контакты</a>
+              </li>
+            </ul>
+
+            <address class="auth-nav-address">
+              <ul class="auth-nav">
+                <li class="auth-nav-item">
+                  <a href="mailto:info@devstudio.com" class="auth-nav-link">
+                    <svg
+                      class="envelope envelope-desktop-envelope"
+                      width="14"
+                      height="10"
+                    >
+                      <use href="./images/sprite.svg#envelope"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+
+                <li class="auth-nav-item">
+                  <a
+                    href="tel:+380961111111"
+                    class="auth-nav-link auth-nav-link-color"
+                    ><svg
+                      class="envelope envelope-desktop-smartphone"
+                      width="10"
+                      height="14"
+                    >
+                      <use href="./images/sprite.svg#smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+
+            <ul class="auth-nav-list-mobile">
+              <li class="auth-nav-item-mobile">
+                <a class="auth-nav-link-mobile" href="">Instagram</a>
+              </li>
+
+              <li class="auth-nav-item-mobile">
+                <a class="auth-nav-link-mobile" href="">Twitter</a>
+              </li>
+
+              <li class="auth-nav-item-mobile">
+                <a class="auth-nav-link-mobile" href="">Facebook</a>
+              </li>
+
+              <li class="auth-nav-item-mobile">
+                <a class="auth-nav-link-mobile" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-
-        <ul class="auth-nav">
-          <li class="auth-nav-item">
-            <a href="mailto:info@devstudio.com" class="auth-nav-link">
-              <svg class="envelope" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-
-          <li class="auth-nav-item">
-            <a href="tel:+380961111111" class="auth-nav-link"
-              ><svg class="envelope" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
 
@@ -145,32 +203,65 @@
           <h2 class="engage-title">Чем мы занимаемся</h2>
           <ul class="engage-list ul">
             <li class="engage-card">
-              <img
-                src="./images/work1.jpg"
-                alt="Компания №1"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/d_engage_1-min.jpg    1x,
+                    ./images/desktop/d_engage_1@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/desktop/d_engage_1-min.jpg"
+                  alt="Компания №1"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <h3 class="engage-img-text">Десктопные приложения</h3>
             </li>
 
             <li class="engage-card">
-              <img
-                src="./images/work2.jpg"
-                alt="Компания №2"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/d_engage_2-min.jpg    1x,
+                    ./images/desktop/d_engage_2@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/desktop/d_engage_2-min.jpg"
+                  alt="Компания №2"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <h3 class="engage-img-text">Мобильные приложения</h3>
             </li>
 
             <li class="engage-card">
-              <img
-                src="./images/work3.jpg"
-                alt="Компания №3"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/d_engage_3-min.jpg    1x,
+                    ./images/desktop/d_engage_3@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/desktop/d_engage_3-min.jpg"
+                  alt="Компания №3"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <h3 class="engage-img-text">Дизайнерские решения</h3>
             </li>
           </ul>
@@ -185,13 +276,40 @@
 
           <ul class="command-list">
             <li class="command-item">
-              <img
-                class="command-img"
-                src="./images/img.jpg"
-                alt="Мужчина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/d_command_1-min.jpg    1x,
+                    ./images/desktop/d_command_1@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/t_command_1-min.jpg    1x,
+                    ./images/tablet/t_command_1@2x-min.jpg 2x
+                  "
+                  media="(min-width:
+                768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/m_command_1-min.jpg    1x,
+                    ./images/mobile/m_command_1@2x-min.jpg 2x
+                  "
+                  media="(min-width:
+                767px)"
+                />
+
+                <img
+                  class="command-img"
+                  src="./images/mobile/m_command_1-min.jpg"
+                  alt="Мужчина"
+                  width="450"
+                  height="460"
+                />
+              </picture>
 
               <h3 class="command-section-title">Игорь Демьяненко</h3>
               <p class="command-text">Product Designer</p>
@@ -223,13 +341,41 @@
             </li>
 
             <li class="command-item">
-              <img
-                class="command-img"
-                src="./images/img(1).jpg"
-                alt="Женщина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/d_command_2-min.jpg    1x,
+                    ./images/desktop/d_command_2@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/t_command_2-min.jpg    1x,
+                    ./images/tablet/t_command_2@2x-min.jpg 2x
+                  "
+                  media="(min-width:
+                768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/m_command_2-min.jpg    1x,
+                    ./images/mobile/m_command_2@2x-min.jpg 2x
+                  "
+                  media="(max-width:
+                767px)"
+                />
+
+                <img
+                  class="command-img"
+                  src="./images/mobile/m_command_2-min.jpg"
+                  alt="Женщина"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <h3 class="command-section-title">Ольга Репина</h3>
               <p class="command-text">Frontend Developer</p>
               <div class="social-network">
@@ -260,13 +406,41 @@
             </li>
 
             <li class="command-item">
-              <img
-                class="command-img"
-                src="./images/img(2).jpg"
-                alt="Мужчина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/d_command_3-min.jpg    1x,
+                    ./images/desktop/d_command_3@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/t_command_3-min.jpg    1x,
+                    ./images/tablet/t_command_3@2x-min.jpg 2x
+                  "
+                  media="(min-width:
+                768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/m_command_3-min.jpg    1x,
+                    ./images/mobile/m_command_3@2x-min.jpg 2x
+                  "
+                  media="(max-width:
+                767px)"
+                />
+
+                <img
+                  class="command-img"
+                  src="./images/mobile/m_command_3-min.jpg"
+                  alt="Мужчина"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <h3 class="command-section-title">Николай Тарасов</h3>
               <p class="command-text">Marketing</p>
               <div class="social-network">
@@ -297,13 +471,41 @@
             </li>
 
             <li class="command-item">
-              <img
-                class="command-img"
-                src="./images/img(3).jpg"
-                alt="Мужчина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/d_command_4-min.jpg    1x,
+                    ./images/desktop/d_command_1@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/t_command_4-min.jpg    1x,
+                    ./images/tablet/t_command_4@2x-min.jpg 2x
+                  "
+                  media="(min-width:
+                768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/m_command_4-min.jpg    1x,
+                    ./images/mobile/m_command_4@2x-min.jpg 2x
+                  "
+                  media="(max-width:
+                767px)"
+                />
+
+                <img
+                  class="command-img"
+                  src="./images/mobile/m_command_4-min.jpg"
+                  alt="Мужчина"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <h3 class="command-section-title">Михаил Ермаков</h3>
               <p class="command-text">UI Designer</p>
               <div class="social-network">
@@ -481,7 +683,7 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
-          <svg width="11" height="11">
+          <svg class="modal-btn-plus" width="11" height="11">
             <use href="./images/sprite.svg#plus"></use>
           </svg>
         </button>
@@ -545,15 +747,16 @@
               name="checkbox-modal"
             />
 
-            <span class="checkbox-icon"></span>
-            Соглашаюсь с рассылкой и принимаю&nbsp
-            <a class="link-modal" href=""> Условия договора</a>
+            <span class="checkbox-icon"></span>Соглашаюсь с рассылкой и
+            принимаю&nbsp
+            <a class="link-modal" href="">Условия договора</a>
           </label>
           <button class="btn-modal" type="submit">Отправить</button>
         </form>
       </div>
     </div>
 
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

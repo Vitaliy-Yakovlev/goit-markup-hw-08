@@ -105,13 +105,19 @@
 
 .checkbox-modal {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
   margin-bottom: 30px;
-  text-align: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
+
+  @media screen and (min-width: $desktop) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 
   color: $title-text-color;
 }
@@ -153,8 +159,14 @@
   display: inline-block;
 
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
+
+  @media screen and (min-width: $desktop) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 
   color: $accent-color;
   text-decoration-line: underline;

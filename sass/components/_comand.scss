@@ -1,12 +1,15 @@
 .command {
-  padding-top: 94px;
-  padding-bottom: 94px;
   text-align: center;
   background-color: $secondary-command-color;
 
   @media screen and (max-width: 1199px) {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 
   &-title {
@@ -28,29 +31,30 @@
     display: flex;
     flex-wrap: wrap;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin: -15px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin: -15px;
     }
   }
 
   &-item {
-    width: 100%;
+    max-width: 450px;
+    text-align: center;
 
     background-color: $primary-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       flex-basis: calc((100% - 2 * 30px) / 2);
       margin: 15px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       flex-basis: calc((100% - 4 * 30px) / 4);
       margin: 15px;
     }
@@ -90,21 +94,29 @@
 // Социальные сети
 
 .social-network {
-  @media screen and (min-width: 480px) {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+  margin-left: 32px;
+  margin-right: 32px;
+
+  @media screen and (max-width: 767.98px) {
     display: flex;
     justify-content: space-between;
+
     margin-bottom: 24px;
     margin-left: 122px;
     margin-right: 122px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     margin-bottom: 24px;
     margin-left: 74px;
     margin-right: 74px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin-bottom: 30px;
     margin-left: 32px;
     margin-right: 32px;
