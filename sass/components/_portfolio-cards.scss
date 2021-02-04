@@ -76,7 +76,9 @@
 }
 
 .cards.property {
-  padding: 20px 24px 56px;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding: 20px 24px 56px;
+  }
 }
 
 .cards-box-link:focus,

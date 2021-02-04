@@ -1458,8 +1458,10 @@ a {
   line-height: 1.87;
 }
 
-.cards.property {
-  padding: 20px 24px 56px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cards.property {
+    padding: 20px 24px 56px;
+  }
 }
 
 .cards-box-link:focus,
