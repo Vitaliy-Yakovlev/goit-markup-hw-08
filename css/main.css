@@ -898,7 +898,7 @@ a {
   margin-right: 32px;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 480px) {
   .social-network {
     display: -webkit-box;
     display: -ms-flexbox;
