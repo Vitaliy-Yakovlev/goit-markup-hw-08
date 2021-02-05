@@ -133,8 +133,8 @@
 .checkbox-icon {
   display: inline-block;
   margin-right: 7px;
-  width: 16px;
-  height: 15px;
+  min-width: 16px;
+  min-height: 15px;
   background-color: $primary-white-color;
 
   border: 2px solid $primary-text-color;
