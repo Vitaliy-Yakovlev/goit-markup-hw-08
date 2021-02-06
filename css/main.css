@@ -263,11 +263,18 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  padding-left: 10px;
+}
+
+.auth-nav-item-mobile:nth-child(1) {
+  padding-left: 0;
+}
+
+.auth-nav-item-mobile:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .auth-nav-link-mobile {
-  display: inline-block;
   margin-right: 10px;
   font-weight: 500;
   font-size: 18px;
