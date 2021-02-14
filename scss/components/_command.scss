@@ -1,0 +1,123 @@
+.command {
+  background-color: $secondary-bcg-color;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.command-list {
+  @extend %ul;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.command-item {
+  background: $main-bcg-color;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 767.98px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 15px;
+    flex-basis: calc((100% - 4 * 30px) / 4);
+    max-width: 270px;
+  }
+}
+
+.command-title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: $secondary-text;
+}
+
+.command-img {
+  margin-bottom: 30px;
+}
+
+.command-section-title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+
+  text-align: center;
+
+  color: $secondary-text;
+}
+
+.command-text {
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.18;
+
+  text-align: center;
+}
+
+.social-network {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px 54px;
+
+  @media screen and (min-width: 480px) and (max-width: 767.98px) {
+    padding: 0 122px 54px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 74px 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 32px 30px;
+  }
+}
+
+.link-network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  fill: #afb1b8;
+
+  transition: background-color $time-line-translate, fill $time-line-translate;
+
+  &:hover,
+  &:focus {
+    fill: $secondary-text-color;
+    background-color: $accent-color;
+  }
+}

@@ -1,0 +1,60 @@
+.page-header-nav-logo {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+
+  @media screen and (max-width: 767.98px) {
+    display: inline-block;
+    padding: 16px 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+
+  color: $secondary-text;
+
+  transition: color $time-line-translate;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.logo-web {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+
+  color: $accent-color;
+}
+
+.footer-nav-link-logo {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  text-align: center;
+
+  color: $secondary-text-color;
+
+  transition: color $time-line-translate;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

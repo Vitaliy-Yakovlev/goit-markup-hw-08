@@ -1,0 +1,329 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header-nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.container.mobile {
+  @media screen and (max-width: 767.98px) {
+    position: relative;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+
+  @media screen and (max-width: 767.98px) {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 8px;
+    right: 15px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    &.is-open .mobile-menu-icon-menu {
+      display: none;
+    }
+
+    & .mobile-menu-icon-close {
+      display: none;
+    }
+
+    &.is-open .mobile-menu-icon-close {
+      display: block;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.menu-container {
+  @media screen and (max-width: 767.98px) {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+
+    padding: 15px;
+
+    background-color: $main-bcg-color;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767.98px) {
+    padding: 48px 40px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: contents;
+  }
+}
+
+.menu-container.is-open {
+  @media screen and (max-width: 767.98px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+}
+
+.menu-container-list {
+  @extend %ul;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.menu-container-title-link.active {
+  @media screen and (min-width: 768px) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-color: #2196f3;
+      border-radius: 2px;
+    }
+  }
+
+  color: $accent-color;
+}
+
+.menu-container-title {
+  @media screen and (max-width: 767.98px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & + & {
+      margin-left: 50px;
+    }
+  }
+}
+
+.menu-container-title-link {
+  position: relative;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+
+  color: $secondary-text;
+
+  transition: color $time-line-translate;
+  display: block;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
+
+      transform: scaleX(0);
+      transition: transform $time-line-translate;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform: scaleX(1);
+      transition: transform $time-line-translate;
+    }
+  }
+}
+
+.address-header {
+  font-style: normal;
+}
+
+.address-header-list {
+  @extend %ul;
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 318px;
+  }
+}
+
+.address-header-title {
+  @media screen and (max-width: 767.98px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:nth-child(2) {
+      margin-bottom: 10px;
+    }
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:nth-child(1) {
+      margin-left: 30px;
+    }
+  }
+}
+
+.address-header-title-link.curent {
+  @media screen and (max-width: 767.98px) {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}
+
+.address-header-title-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+
+  color: $main-text;
+  fill: $main-text;
+  transition: color $time-line-translate;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.address-header-icon-smartphone {
+  display: none;
+  margin-right: 10px;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+    width: 10px;
+    height: 16px;
+  }
+}
+
+.address-header-icon-envelope {
+  display: none;
+  margin-right: 10px;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.mobile-menu-social-list {
+  @extend %ul;
+
+  @media screen and (max-width: 767.98px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.mobile-menu-social-title {
+  @media screen and (max-width: 767.98px) {
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      padding-right: 10px;
+    }
+
+    &:not(:nth-child(1)) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.mobile-menu-social-title-link {
+  display: none;
+  @media screen and (max-width: 767.98px) {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+
+    letter-spacing: 0.02em;
+
+    color: $accent-color;
+  }
+}
